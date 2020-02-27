@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		04CC50B7240781DE00B64DFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CC50B5240781DE00B64DFD /* Main.storyboard */; };
 		04CC50B9240781E500B64DFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CC50B8240781E500B64DFD /* Assets.xcassets */; };
 		04CC50BC240781E500B64DFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CC50BA240781E500B64DFD /* LaunchScreen.storyboard */; };
+		04CC50C52407A2B700B64DFD /* Faces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 04CC50C42407A2B700B64DFD /* Faces.mlmodel */; };
+		2B0F9E4DF26CFA21CDBCFD89 /* Pods_FaceCompare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21266C9A131C25B5392C26B /* Pods_FaceCompare.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		04CC50B8240781E500B64DFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04CC50BB240781E500B64DFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04CC50BD240781E500B64DFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04CC50C42407A2B700B64DFD /* Faces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Faces.mlmodel; sourceTree = "<group>"; };
+		07E4227FD6DC4B59D311DE90 /* Pods-FaceCompare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceCompare.release.xcconfig"; path = "Target Support Files/Pods-FaceCompare/Pods-FaceCompare.release.xcconfig"; sourceTree = "<group>"; };
+		17A0B065AB21155B47C8A4BB /* Pods-FaceCompare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceCompare.debug.xcconfig"; path = "Target Support Files/Pods-FaceCompare/Pods-FaceCompare.debug.xcconfig"; sourceTree = "<group>"; };
+		D21266C9A131C25B5392C26B /* Pods_FaceCompare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceCompare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B0F9E4DF26CFA21CDBCFD89 /* Pods_FaceCompare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				04CC50AE240781DE00B64DFD /* FaceCompare */,
 				04CC50AD240781DE00B64DFD /* Products */,
+				2846F8AEFC63568CF2EFA66C /* Pods */,
+				4797DB0D384006817B290932 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,9 +71,27 @@
 				04CC50B5240781DE00B64DFD /* Main.storyboard */,
 				04CC50B8240781E500B64DFD /* Assets.xcassets */,
 				04CC50BA240781E500B64DFD /* LaunchScreen.storyboard */,
+				04CC50C42407A2B700B64DFD /* Faces.mlmodel */,
 				04CC50BD240781E500B64DFD /* Info.plist */,
 			);
 			path = FaceCompare;
+			sourceTree = "<group>";
+		};
+		2846F8AEFC63568CF2EFA66C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17A0B065AB21155B47C8A4BB /* Pods-FaceCompare.debug.xcconfig */,
+				07E4227FD6DC4B59D311DE90 /* Pods-FaceCompare.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4797DB0D384006817B290932 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D21266C9A131C25B5392C26B /* Pods_FaceCompare.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04CC50C0240781E500B64DFD /* Build configuration list for PBXNativeTarget "FaceCompare" */;
 			buildPhases = (
+				1377B0CD142A863E42F0F1B4 /* [CP] Check Pods Manifest.lock */,
 				04CC50A8240781DE00B64DFD /* Sources */,
 				04CC50A9240781DE00B64DFD /* Frameworks */,
 				04CC50AA240781DE00B64DFD /* Resources */,
+				896A9349401A91668F285050 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +162,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1377B0CD142A863E42F0F1B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FaceCompare-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		896A9349401A91668F285050 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceCompare/Pods-FaceCompare-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceCompare/Pods-FaceCompare-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceCompare/Pods-FaceCompare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		04CC50A8240781DE00B64DFD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -141,6 +212,7 @@
 				04CC50B4240781DE00B64DFD /* ViewController.swift in Sources */,
 				04CC50B0240781DE00B64DFD /* AppDelegate.swift in Sources */,
 				04CC50B2240781DE00B64DFD /* SceneDelegate.swift in Sources */,
+				04CC50C52407A2B700B64DFD /* Faces.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +354,7 @@
 		};
 		04CC50C1240781E500B64DFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17A0B065AB21155B47C8A4BB /* Pods-FaceCompare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +373,7 @@
 		};
 		04CC50C2240781E500B64DFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07E4227FD6DC4B59D311DE90 /* Pods-FaceCompare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
